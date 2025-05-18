@@ -4,7 +4,7 @@
  --text-dark: #333;
  --text-light: #ebebeb;
  --primary-font: Arial, Helvetica,sans-serif;
- --secondary-font: Mooli, san-serif;
+ --secondary-font: 'Mooli', san-serif;
  }
 
  header, footer {
@@ -41,11 +41,12 @@ button {
 }
 
 img {
-    border: 5px solid darkred;
-    width: 250px;
-    height: 250px;
-    border-radius: 8px;
-    object-fit: cover;
+  width: 100%;
+  max-width: 250px;
+  aspect-ratio: 1 / 1;      /* keeps it square */
+  object-fit: cover;
+  border: 5px solid darkred;
+  border-radius: 8px;
 }
 
 #MenuList {
@@ -58,6 +59,7 @@ img {
     max-width: 900px;
     gap: 1rem;
     margin: 0 auto;
+    justify-content: center;
   }
 
   @media screen and (min-width: 700px) {
@@ -65,13 +67,11 @@ img {
     grid-template-columns: 1fr 1fr 1fr;
   }
     #MenuList {
-    display: block; 
-
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 1rem;
     margin: 0 auto;
-
+    justify-content: center;
 
   }
 
@@ -80,3 +80,50 @@ img {
   }
 
   }
+
+  .hide {
+  display: none;
+}
+
+.thumbnail {
+  width: 150px;
+  margin: 10px;
+  border: 2px solid darkred;
+  border-radius: 6px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+dialog {
+  border: none;
+  padding: 1rem;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+#viewerImg {
+  max-width: 100%;
+  max-height: 80vh;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 8px;
+}
+
+#closeViewer {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: darkred;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
