@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Accessible Color Palettes</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: #f9f9f9;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .palette {
+    margin-bottom: 40px;
+  }
+  .palette-name {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+  .colors {
+    display: flex;
+    gap: 10px;
+  }
+  .color-box {
+    flex: 1;
+    height: 60px;
+    border-radius: 6px;
+    box-shadow: 0 0 4px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #222;
+    font-weight: 600;
+    font-size: 0.85rem;
+    user-select: none;
+  }
+  /* Text color overrides for dark backgrounds */
+  .dark-text {
+    color: #000;
+  }
+  .light-text {
+    color: #fff;
+  }
+</style>
+</head>
+<body>
+
+<h1>Accessible Color Palettes</h1>
+
+<div class="palette">
+  <div class="palette-name">Classic Blue + White + Dark Gray</div>
+  <div class="colors">
+    <div class="color-box dark-text" style="background: #FFFFFF;">#FFFFFF</div>
+    <div class="color-box light-text" style="background: #0D1B2A;">#0D1B2A</div>
+    <div class="color-box light-text" style="background: #1E90FF;">#1E90FF</div>
+    <div class="color-box light-text" style="background: #444444;">#444444</div>
+    <div class="color-box dark-text" style="background: #CCCCCC;">#CCCCCC</div>
+  </div>
+</div>
+
+<div class="palette">
+  <div class="palette-name">Soft Green + Dark Green + Off-White</div>
+  <div class="colors">
+    <div class="color-box dark-text" style="background: #F0F9F4;">#F0F9F4</div>
+    <div class="color-box light-text" style="background: #064635;">#064635</div>
+    <div class="color-box light-text" style="background: #2CA58D;">#2CA58D</div>
+    <div class="color-box light-text" style="background: #3A6B58;">#3A6B58</div>
+    <div class="color-box dark-text" style="background: #B5D6C5;">#B5D6C5</div>
+  </div>
+</div>
+
+<div class="palette">
+  <div class="palette-name">Warm Orange + Dark Brown + Cream</div>
+  <div class="colors">
+    <div class="color-box dark-text" style="background: #FFF7E6;">#FFF7E6</div>
+    <div class="color-box light-text" style="background: #4B2E05;">#4B2E05</div>
+    <div class="color-box dark-text" style="background: #FF7F11;">#FF7F11</div>
+    <div class="color-box light-text" style="background: #7F4E1E;">#7F4E1E</div>
+    <div class="color-box dark-text" style="background: #FFD8A9;">#FFD8A9</div>
+  </div>
+</div>
+
+<div class="palette">
+  <div class="palette-name">Dark Mode Friendly (Dark Gray + Cyan + Light Gray)</div>
+  <div class="colors">
+    <div class="color-box light-text" style="background: #121212;">#121212</div>
+    <div class="color-box dark-text" style="background: #E0F7FA;">#E0F7FA</div>
+    <div class="color-box dark-text" style="background: #00B8D4;">#00B8D4</div>
+    <div class="color-box dark-text" style="background: #90A4AE;">#90A4AE</div>
+    <div class="color-box light-text" style="background: #263238;">#263238</div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+const articles = [
+	{
+		id: 1,
+		title: 'Septimus Heap Book One: Magyk',
+		date: 'July 5, 2022',
+		description:
+			'If you enjoy stories about seventh sons of seventh sons and magyk this is the book for you.',
+		imgSrc: 'https://upload.wikimedia.org/wikipedia/en/5/5f/Magkycover2.jpg',
+		imgAlt: 'Book cover for Septimus Heap 1',
+		ages: '10-14',
+		genre: 'Fantasy',
+		stars: '⭐⭐⭐⭐'
+	},
+	{
+		id: 2,
+		title: 'Magnus Chase Book One: Sword of Summer',
+		date: 'December 12, 2021',
+		description:
+			'The anticipated new novel by Rick Riordan. After Greek mythology (Percy Jackson), Greek/Roman (Heroes of Olympus), and Egyptian (Kane Chronicles), Rick decides to try his hand with Norse Mythology, and the end result is good.',
+		imgSrc:
+			'https://books.google.com/books/content/images/frontcover/xWuyBAAAQBAJ?fife=w300',
+		imgAlt: 'Book cover for Magnus Chase 1',
+		ages: '12-16',
+		genre: 'Fantasy',
+		stars: '⭐⭐⭐⭐'
+	}
+]
+
+// function leftTemplate(book) {
+//   return `
+//     <div class="card">
+//     	<p class="date">Date: ${book.date}</p>
+//     	<p class="age">Age Range: ${book.ages}</p>
+//     	<p class="genre">Genre: ${book.genre}</p>
+//     	<p class="rating">Rating: ${book.stars}</p>
+//   	</div>`
+// }
+
+// function centerTemplate(book) {
+// 	return`
+// 	<p class="title">${book.title}</p>
+// 	<img src="${book.imgSrc}" alt="picture" class="bookimage"></img>`
+// }
+
+// function placeBooks(bookArray) {
+// 	const leftElement   = document.getElementById("left");
+// 	const centerElement = document.getElementById("center");
+// 	bookArray.forEach(bookElement => {
+// 		const leftElementInfo   = leftTemplate(bookElement);
+// 		const centerelementInfo = centerTemplate(bookElement);
+// 		leftElement.innerHTML += leftElementInfo;
+// 		centerElement.innerHTML += centerelementInfo;
+// 	});
+// }
+
+
+function bookRowTemplate(book) {
+  return `
+    <div class="book-row">
+      <div class="book-left">
+        <p class="card date" >Date: ${book.date}</p>
+        <p class="card age"  >Age Range: ${book.ages}</p>
+        <p class="card genre">Genre: ${book.genre}</p>
+        <p class="card rating">Rating: ${book.stars}</p>
+      </div>
+      <div class="book-center">
+        <p class="card title">${book.title}</p>
+        <img src="${book.imgSrc}" alt="${book.imgAlt}" class="bookimage">
+      </div>
+    </div>
+  `;
+}
+
+function placeBooks(bookArray) {
+  const centerElement = document.getElementById("center");
+  bookArray.forEach(book => {
+    centerElement.innerHTML += bookRowTemplate(book);
+  });
+}
+
+placeBooks(articles);
+
+const searchElement = document.getElementById("menusearch")
+if (window.innerWidth >= 768) {
+  searchElement.style.visibility = "hidden";
+} else {
+  searchElement.style.visibility = "visible";
+}

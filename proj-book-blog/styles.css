@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+:root {
+  --background: #F0F9F4;
+  --primary-text: #064635;
+  --accent: #2CA58D;
+  --secondary-text: #3A6B58;
+  --border: #B5D6C5;
+}
+/* 
+classes from the js (all of these are the automated elements so i dont need to copy paste a million times if i have to add more or retrieve them from an api)
+
+NEEDING FONT AND BOXES and placement LEFT
+    age   = age range
+    date  = date of review i assume (i know magyk wasnt published that recently)
+    genre = listed genre for the book
+    rating= listed rating for the book
+
+NEEDING PLACMENT AND BOXES CENTER
+    bookimage = image to present to the user
+    title = title of the book
+*/
+/* mobile layout */
+#left {
+    display: none;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; 
+    gap: 10px;
+    }
+
+
+/* Desktop layout (side-by-side) */
+@media (min-width: 768px) {
+
+    #left{display: block;}
+
+    .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 10px;
+    }
+
+
+}
+
+body {
+    font-family: "Special Elite", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    background-color: var(--background);
+}
+
+
+
+.card {
+    border:2px solid var(--secondary-text);    /* Box border */
+    padding: 4px 8px;           /* Space inside the box */
+    display: inline-block;      /* Makes padding & border wrap tightly */
+    background-color: var(--accent);
+}
+
+.book-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.book-left,
+.book-center {
+  background-color: var(--background);
+  padding: 10px;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+}
+
+.headCard {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  width: fit-content;
+  max-width: 90%;
+}
+
+.header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a {
+  color: inherit;             
+  text-decoration: none;   
+}
