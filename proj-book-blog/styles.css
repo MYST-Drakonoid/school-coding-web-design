@@ -21,15 +21,37 @@ NEEDING PLACMENT AND BOXES CENTER
     title = title of the book
 */
 /* mobile layout */
-#left {
+#right {
     display: none;
 }
 
+#left {
+    padding-left: 0;
+
+}
+
 .container {
+    padding-top: 10px;
     display: grid;
-    grid-template-columns: 1fr 2fr; 
+    grid-template-columns: 1fr; 
     gap: 10px;
+    padding-left: 0;
+    margin: 0 auto;
+    max-width: 100%;
+    justify-content: center;
+
     }
+
+  #center {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px; 
+  text-align: center;
+}
+
+#mobilesearch {
+  display: block; /* visible by default on mobile */
+}
 
 
 /* Desktop layout (side-by-side) */
@@ -38,12 +60,37 @@ NEEDING PLACMENT AND BOXES CENTER
     #left{display: block;}
 
     .container {
+    padding-top: 10px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
-    gap: 10px;
+    grid-template-columns: 1fr 2fr 1.8fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: start;
+    width: 100%;
     }
 
+  #left {
+    
+    text-align: right;
+    
+  }
 
+  #center {
+    text-align: left;
+    text-align: left;
+    margin: 0;         
+    max-width: unset;  
+  }
+
+  #right {
+    text-align: left;
+    display: block;
+  }
+
+  #mobilesearch {
+    display: none; 
+  }
 }
 
 body {
@@ -56,9 +103,9 @@ body {
 
 
 .card {
-    border:2px solid var(--secondary-text);    /* Box border */
-    padding: 4px 8px;           /* Space inside the box */
-    display: inline-block;      /* Makes padding & border wrap tightly */
+    border:2px solid var(--secondary-text);    
+    padding: 4px 8px;           
+    display: inline-block;      
     background-color: var(--accent);
 }
 
@@ -67,6 +114,8 @@ body {
   grid-template-columns: 1fr 2fr;
   gap: 10px;
   margin-bottom: 1rem;
+ 
+
 }
 
 .book-left,
@@ -98,4 +147,31 @@ body {
 a {
   color: inherit;             
   text-decoration: none;   
+  position: relative;
+  color: inherit;
+  text-decoration: none; /* Remove default underline */
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px; /* How far below the text */
+  width: 120%; /* Slightly wider than the text */
+  height: 3px; /* Thickness of underline */
+  background-color: var(--secondary-text); /* Customize this */
+  transform: translateX(-10%); /* Center the wider underline */
+}
+
+#left .card,
+#center .title,
+#center .bookimage {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.bookimage {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
