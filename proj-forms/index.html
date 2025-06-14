@@ -1,0 +1,90 @@
+<!-- https://myst-drakonoid.github.io/school-coding-web-design/proj-book-blog/index.html -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book reveiw blog</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <meta name="author" content="Anthony Peterson" />
+    <meta
+  name="description"
+  content="credit card form stuff" />
+ </head>
+<body>
+    <main>
+
+            
+
+
+            <!-- container for front card info -->
+            <div id="cardnumberdiv">
+
+                <div id="totaldiv">
+                    <p>Total: $3,720.21</p>
+                    <!-- yes that is a reference -->
+                </div>
+
+                <div id="card-wrapper">
+                <div id="card-shadow">
+
+                    <div id="mag-strip-shadow"></div>
+
+
+                    <div id="cvc-container-shadow">
+                    <label for="card-cvc">CVC/CVV</label>
+                    <input id="card-cvc" placeholder="XXX-X" type="text" maxlength="4" />
+                    </div>
+
+                </div>
+                <div id="card-front">
+                    <div class="form-pair">
+                        <label for="card-number">Card Number</label>
+                        <input
+                        type="text"
+                        name="cardnumber"
+                        id="card-number"
+                        placeholder="1234 5678 9009 8765"
+                        maxlength="19"
+                        />
+                    </div>
+
+                    <div class="row-pair">
+                        <div class="form-pair">
+                        <label for="card-holder">Card Holder</label>
+                        <input
+                            type="text"
+                            name="cardholder"
+                            id="card-holder"
+                            placeholder="e.g. John Smith"
+                        />
+                        </div>
+
+                        <div class="form-pair">
+                        <label for="card-exp">Expiration</label>
+                        <div class="exp-inputs">
+                            <input id="card-month" name="cardmonth" type="text" placeholder="MM" maxlength="2"/>
+                            <input
+                            id="card-year"
+                            name="cardyear"
+                            type="text"
+                            placeholder="YY"
+                            maxlength="2"
+                            />
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+
+                
+
+                
+                <button type="button" id="card-btn">Submit</button>
+            </div>
+
+
+
+    </main>
+</body>

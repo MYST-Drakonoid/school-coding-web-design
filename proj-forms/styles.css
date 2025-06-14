@@ -1,0 +1,187 @@
+/* Container for the card pair */
+#card-wrapper {
+  position: relative;
+  width: 340px;
+  height: 210px;
+  margin: 40px auto; /* center horizontally */
+}
+
+/* Shadow card behind the main card */
+#card-shadow {
+  position: absolute;
+  top: 15px;     /* vertical offset */
+  left: 100px;   /* horizontal offset - adjust to move shadow right */
+  width: 340px;
+  height: 210px;
+  background: linear-gradient(135deg, #003f6b, #006ea3); /* darker blue */
+  border-radius: 20px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  filter: brightness(0.8);
+  user-select: none;
+}
+
+/* Magnetic strip on the shadow card */
+#mag-strip-shadow {
+  width: 100%;
+  height: 30px;
+  background-color: #555;
+  border-radius: 6px;
+  margin-top: 15px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* CVV container on shadow card bottom right */
+#cvc-container-shadow {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  color: white;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 80px;
+}
+
+#cvc-container-shadow label {
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+#cvc-container-shadow input {
+  padding: 6px 8px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  background: transparent;
+  color: white;
+  outline: none;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.6);
+  caret-color: white;
+  transition: border-color 0.3s ease;
+}
+
+#cvc-container-shadow input:focus {
+  border-bottom-color: white;
+}
+
+/* Main card front */
+#card-front {
+  position: relative;
+  z-index: 2;
+  width: 340px;
+  height: 210px;
+  background: linear-gradient(135deg, #0057a3, #0088cc);
+  border-radius: 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  padding: 25px 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #fff;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+/* Form pair - label + input block */
+.form-pair {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 140px;
+  min-width: 140px;
+  gap: 6px;
+}
+
+/* Labels styling */
+.form-pair label {
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: #d0e9ff;
+  text-transform: uppercase;
+}
+
+/* Inputs for card number and text fields */
+.form-pair input[type="text"],
+#card-number {
+  width: 100%;
+  padding: 8px 5px;
+  font-size: 1.1rem;
+  background: transparent;
+  border: none;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.6);
+  color: #fff;
+  outline: none;
+  box-sizing: border-box;
+  caret-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.form-pair input[type="text"]:focus,
+#card-number:focus {
+  border-bottom-color: #fff;
+}
+
+/* Container for Card Holder and Expiration on the same line */
+.row-pair {
+  display: flex;
+  gap: 25px;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  margin-bottom: 0;
+}
+
+/* Expiration inputs side by side */
+.exp-inputs {
+  display: flex;
+  gap: 10px;
+}
+
+/* MM / YY input boxes */
+.exp-inputs input {
+  width: 45px;
+  padding: 7px 5px;
+  font-size: 1.1rem;
+  background: transparent;
+  border: none;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.6);
+  color: #fff;
+  outline: none;
+  caret-color: #fff;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.exp-inputs input:focus {
+  border-bottom-color: #fff;
+}
+
+#card-btn {
+  display: block;
+  margin: 30px auto 0 auto; /* 30px top margin, horizontally centered */
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  background-color: #0088cc;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,136,204,0.4);
+  transition: background-color 0.3s ease;
+}
+
+#card-btn:hover {
+  background-color: #005f8a;
+}
+
+#totaldiv {
+    justify-content: center;
+    padding-top: 10px;
+    
+}
