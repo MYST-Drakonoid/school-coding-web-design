@@ -156,11 +156,11 @@ a::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -4px; /* How far below the text */
-  width: 120%; /* Slightly wider than the text */
-  height: 3px; /* Thickness of underline */
-  background-color: var(--secondary-text); /* Customize this */
-  transform: translateX(-10%); /* Center the wider underline */
+  bottom: -4px; 
+  width: 120%; 
+  height: 3px; 
+  
+  transform: translateX(-10%); 
 }
 
 #left .card,
