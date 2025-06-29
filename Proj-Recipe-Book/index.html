@@ -1,0 +1,68 @@
+<!-- https://myst-drakonoid.github.io/school-coding-web-design/Proj-Recipe-Book/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Recipe Book</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" type="module"  defer></script>
+  <meta name="author" content="Anthony Peterson" />
+  <meta name="description" content="recipe book" />
+
+  <meta property="og:title" content="Recipe book" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="a list of helpful recipes" />
+  <meta property="og:image" content="./images/recipe-book.png" />
+  <meta property="og:url" content="https://myst-drakonoid.github.io/school-coding-web-design/Proj-Recipe-Book/index.html" />
+  <meta name="twitter:card" content="./images/recipe-book.png" />
+  <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+</head>
+<body>
+  <header >
+    <div id="header-content">
+    <img id="titleimage" src="./images/recipe-book.png" alt="title image" />
+    <div id="title-text">
+        <p>Recipe</p>
+        <p>Book</p>
+    </div>
+    </div>
+    <form id="search-form">
+      <label for="search">Search:</label>
+      <input
+        type="search"
+        id="search"
+        name="q"
+        placeholder="type here..."
+        autocomplete="off"
+      />
+      <button type="submit">🔍</button>
+    </form>
+  </header>
+
+  <div id="recipe-container">
+    <!-- items will be added through JS -->
+  </div>
+
+<footer>
+  <p class="credit">
+    <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons" target="_blank" rel="noopener noreferrer">
+      Recipe icons created by Freepik - Flaticon
+    </a>
+  </p>
+
+  <nav class="social" aria-label="Social media links">
+    <a href="#" aria-label="Instagram">
+      <img src="images/instagram_icon.svg" alt="Instagram icon" />
+    </a>
+    <a href="#" aria-label="YouTube">
+      <img src="images/youtube_icon.svg" alt="YouTube icon" />
+    </a>
+    <a href="#" aria-label="Pinterest">
+      <img src="images/pinterest_icon.svg" alt="Pinterest icon" />
+    </a>
+  </nav>
+</footer>
+</body>
+</html>

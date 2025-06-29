@@ -1,0 +1,232 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
+
+:root {
+  --primary-color: #1c1c1c;
+  --secondary-color: #d2f9f9;
+  --text-dark: #333;
+  --text-light: #ebebeb;
+  --primary-font: Arial, Helvetica, sans-serif;
+  --secondary-font: "Amatic SC", cursive;
+}
+
+/* Header container with image + text side by side */
+#header-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center; /* centers the content horizontally */
+}
+
+/* Title image, scaled up */
+#titleimage {
+  height: 180px; /* 3x approx. from 60px */
+  width: auto;   /* maintain aspect ratio */
+}
+
+/* Title text stacked vertically, large font */
+#title-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* center text horizontally */
+  font-family: var(--secondary-font);
+  font-weight: bold;
+  font-size: 3.6rem;       /* about 3x bigger */
+  line-height: 1;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  margin: 0;
+}
+
+
+#title-text p {
+  margin: 0;
+}
+
+
+@media (max-width: 600px) {
+  #header-content {
+    flex-direction: column;
+  }
+
+  #titleimage {
+    height: 100px;
+  }
+
+  #title-text {
+        font-size: 2rem;
+  }
+}
+
+.recipe-card {
+  display: flex;
+  gap: 1rem;
+  border: 2px solid black;   
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem auto 1.5rem;  
+  background-color: white;    
+  color: black;            
+  align-items: flex-start;
+  max-width: 800px;
+}
+
+.recipe-image {
+  flex: 1 1 33%;
+  max-width: 33%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.recipe-text {
+  flex: 2 1 67%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: black; 
+}
+
+.recipe-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag {
+  background-color: black;    
+  color: white;                 
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.recipe-title {
+  margin: 0;
+  font-size: 1.8rem;
+  color: black;                
+}
+
+.recipe-rating {
+  font-size: 1.2rem;
+  color: gold;
+}
+
+.recipe-description {
+  font-size: 1rem;
+  line-height: 1.3;
+  color: black;               
+}
+
+@media (max-width: 600px) {
+  .recipe-card {
+    flex-direction: column;
+    align-items: center;     
+  }
+
+  .recipe-image {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  .recipe-text {
+    flex: none;
+    text-align: center;        
+  }
+}
+
+
+
+
+
+#search-form {
+  display: flex;
+  justify-content: center;       /* center the form horizontally */
+  gap: 0.5rem;                   /* space between input and button */
+  margin: 1.5rem 0;              /* vertical spacing */
+}
+
+#search-form label {
+  display: none;                 /* hide the label for cleaner look, keep for accessibility */
+}
+
+#search {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 2px solid var(--primary-color, #1c1c1c);
+  border-radius: 6px 0 0 6px;   /* rounded left corners */
+  outline-offset: 2px;
+  width: 250px;
+  max-width: 90vw;               /* responsive max width */
+  font-family: var(--primary-font, Arial, sans-serif);
+}
+
+#search:focus {
+  border-color: var(--secondary-color, #d2f9f9);
+  box-shadow: 0 0 5px var(--secondary-color, #d2f9f9);
+}
+
+#search-form button {
+  padding: 0 1rem;
+  font-size: 1.2rem;
+  border: 2px solid var(--primary-color, #1c1c1c);
+  border-left: none;             /* remove double border between input and button */
+  border-radius: 0 6px 6px 0;   /* rounded right corners */
+  background-color: var(--primary-color, #1c1c1c);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#search-form button:hover,
+#search-form button:focus {
+  background-color: var(--secondary-color, #d2f9f9);
+  color: var(--primary-color, #1c1c1c);
+  outline: none;
+}
+
+
+
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  color: black;
+  font-family: var(--primary-font, Arial, sans-serif);
+  font-size: 0.9rem;
+}
+
+footer .credit a {
+  text-decoration: none;
+  color: inherit;
+}
+
+footer .credit a:hover,
+footer .credit a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+footer .social {
+  display: flex;
+  gap: 1rem;
+}
+
+footer .social a img {
+  width: 28px;
+  height: 28px;
+  display: block;
+  transition: filter 0.3s ease;
+}
+
+footer .social a:hover img,
+footer .social a:focus img {
+  filter: grayscale(100%);
+  cursor: pointer;
+  outline: none;
+}
