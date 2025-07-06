@@ -66,3 +66,10 @@ searchInput.addEventListener('input', () => {
 });
 
 
+const randomButton = document.getElementById('random-button');
+
+randomButton.addEventListener('click', () => {
+  const randomIndex = Math.floor(Math.random() * recipes.length);
+  const randomRecipe = recipes[randomIndex];
+  renderRecipes([randomRecipe]);
+});
