@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Deck of Many Things Viewer</title>
+  <link rel="stylesheet" href="styles2.css" />
+  <script src="cardinfo.js" defer></script>
+  <meta name="author" content="Anthony Peterson" />
+  <meta
+    name="description"
+    content="Deck of Many Things card viewer with flipping cards and active deck selection"
+  />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+  <link rel="icon" type="image/x-icon" href="images/favicon-32x32.png" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Schoolbell&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <header>
+    <div class="top-row">
+      <img
+        id="logo"
+        src="images/0366745d-8383-457c-ab5d-d87d1672671a.png"
+        alt="Deck of Many Dice logo"
+      />
+      <h1 id="title">Deck of Many Things</h1>
+    </div>
+    <div id="links">
+      <a href="index.html">CARD DECK</a>
+      <a href="DOMT.html">OTHER PAGE</a>
+    </div>
+  </header>
+
+  <section id="mod" class="main-layout">
+    <!-- Left Panel: Card checklist -->
+    <aside class="left-panel">
+      <h2>Active Cards</h2>
+      <div id="card-list" class="card-list"></div>
+    </aside>
+
+    <!-- Middle Panel: Flipping card + description + remove prompt -->
+    <section class="middle-panel">
+      <div class="flip-card" id="flip-card">
+        <div class="flip-inner" id="flip-inner">
+          <div class="flip-front">
+            <img
+              id="card-back-image"
+              src="images\DOMT\back.png"
+              alt="Card back"
+            />
+          </div>
+          <div class="flip-back">
+            <img id="card-front-image" alt="Drawn card" />
+            <h3 id="card-front-name"></h3>
+          </div>
+        </div>
+      </div>
+      <div id="card-description" class="card-description">
+        Click the card to draw.
+      </div>
+      <div id="remove-prompt" class="remove-prompt hidden">
+        <p>Remove this card from the deck?</p>
+        <button id="remove-yes">Yes</button>
+        <button id="remove-no" autofocus>No</button>
+      </div>
+    </section>
+
+    <!-- Right Panel: History and second most recent effect -->
+    <aside class="right-panel">
+      <h2>Draw History</h2>
+      <ul id="history-list" class="history-list"></ul>
+      <div id="second-recent-effect" class="second-recent-effect"></div>
+    </aside>
+  </section>
+
+  <footer>
+    <p>
+      This content is based on the 5.1 System Reference Document © 2016 Wizards
+      of the Coast LLC, available under the Creative Commons Attribution 4.0
+      International License.
+    </p>
+  </footer>
+</body>
+</html>

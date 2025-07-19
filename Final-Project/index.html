@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Deck of Many Dice</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+  <meta name="author" content="Anthony Peterson" />
+  <meta
+    name="description"
+    content="homepage and dice rolling site for the deck of many dice"
+  />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+  <link rel="icon" type="image/x-icon" href="images/favicon-32x32.png" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Schoolbell&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <header>
+    <div class="top-row">
+      <img
+        id="logo"
+        src="images/0366745d-8383-457c-ab5d-d87d1672671a.png"
+        alt="Deck of Many Dice logo"
+      />
+      <h1 id="title">Deck of Many Dice</h1>
+    </div>
+
+    <div id="links">
+      <a href="index.html">DICE ROLLER</a>
+      <a href="DOMT.html">DECK OF MANY THINGS</a>
+    </div>
+  </header>
+
+  <section id="mod" class="main-layout">
+    <div class="roller-container">
+      <div class="dice-controls">
+        <div class="selector-group">
+          <label>
+            Number:
+            <input id="dice-count" type="number" min="1" max="10" value="1" />
+          </label>
+          <label>
+            Type:
+            <select id="dice-type">
+              <option value="4">d4</option>
+              <option value="6">d6</option>
+              <option value="8">d8</option>
+              <option value="10">d10</option>
+              <option value="12">d12</option>
+              <option value="20" selected>d20</option>
+            </select>
+          </label>
+        </div>
+        <button id="roll-button-mobile" class="roll-button-mobile">Roll</button>
+      </div>
+
+      <div class="dice-display">
+        <img id="dice-image" src="images/d20.png" alt="A d20 dice image" />
+        <button id="roll-button">Roll</button>
+        <p id="recent-roll" class="recent-roll"></p>
+      </div>
+    </div>
+
+    <div class="dice-history">
+      <h2>History</h2>
+      <ul id="history-list"></ul>
+    </div>
+  </section>
+
+  <footer>
+    <!-- <p>
+      This content is based on the 5.1 System Reference Document © 2016 Wizards
+      of the Coast LLC, available under the Creative Commons Attribution 4.0
+      International License.
+    </p> -->
+  </footer>
+</body>
+</html>
